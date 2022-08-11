@@ -104,7 +104,6 @@ func generateJsonFiles(sf *storagefile.StorageFile) {
 }
 
 func saveToSqlite(sf *storagefile.StorageFile) {
-	// TODO : save to sqlite
 
 	log.Println("sqlite start")
 	start := time.Now()
@@ -133,6 +132,7 @@ func saveToSqlite(sf *storagefile.StorageFile) {
 }
 
 func rdbtest() {
+
 	db := NewDB()
 	defer db.Close()
 
@@ -162,6 +162,7 @@ func rdbtest() {
 }
 
 func generateInvoices(sf *storagefile.StorageFile, count int) {
+
 	log.Println("generate invoices start")
 	start := time.Now()
 	for i := 0; i < count; i++ {
