@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/mgholam/rdblite"
@@ -40,6 +41,8 @@ func NewDB() *DB {
 	} else {
 		db.Invoices.LoadJson("json/invoices.json")
 	}
+
+	fmt.Println()
 
 	return &db
 }

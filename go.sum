@@ -12,6 +12,8 @@ github.com/mattn/go-sqlite3 v1.14.9 h1:10HX2Td0ocZpYEjhilsuo6WWtUqttj2Kb0KtD86/K
 github.com/mattn/go-sqlite3 v1.14.9/go.mod h1:NyWgC/yNuGj7Q9rpYnZvas74GogHl5/Z4A/KQRfk6bU=
 github.com/mgholam/rdblite v0.0.0-20220810074639-074fd160e6b3 h1:89b/c7bEyuEDiamBTn9nUy+YNWVhCLRhcHWbRO4l8g4=
 github.com/mgholam/rdblite v0.0.0-20220810074639-074fd160e6b3/go.mod h1:/7WvZQjV58WEp1RrJEglvSEg89gNKXlAlzKmHtDMdWo=
+github.com/mgholam/rdblite v0.0.0-20220811123924-02424f0c1f29 h1:hEuGTvorT2nS0LlJ2rIwnascPfsBvYkz0l4ACnFJlL4=
+github.com/mgholam/rdblite v0.0.0-20220811123924-02424f0c1f29/go.mod h1:/7WvZQjV58WEp1RrJEglvSEg89gNKXlAlzKmHtDMdWo=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
