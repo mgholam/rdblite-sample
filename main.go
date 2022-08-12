@@ -41,6 +41,7 @@ func main() {
 
 	sqlitetest()
 	rdbtest()
+	printMemUsage()
 }
 
 func sqlitetest() {
@@ -61,7 +62,14 @@ func sqlitetest() {
 	log.Println("sqlite where ", time.Since(start))
 	log.Println("count", len(invs))
 
+	start = time.Now()
+	sq.Find(&invs)
+	log.Println("sqlite where ", time.Since(start))
+	log.Println("count", len(invs))
+
 	fmt.Println()
+	// printMemUsage()
+
 	sqlDB, _ := sq.DB()
 	sqlDB.Close()
 }
@@ -158,7 +166,7 @@ func rdbtest() {
 	log.Println("search invoices count =", len(inv))
 	fmt.Println()
 
-	printMemUsage()
+	// printMemUsage()
 }
 
 func generateInvoices(sf *storagefile.StorageFile, count int) {
