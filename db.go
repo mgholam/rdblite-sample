@@ -8,8 +8,8 @@ import (
 )
 
 type DB struct {
-	Table1   *rdblite.Table[*Table1]
-	Invoices *rdblite.Table[*InvoiceTable]
+	Table1   *rdblite.Table[Table1]
+	Invoices *rdblite.Table[InvoiceTable]
 }
 
 func (d *DB) Close() {
@@ -22,11 +22,11 @@ func NewDB() *DB {
 
 	db := DB{}
 
-	db.Table1 = &rdblite.Table[*Table1]{
+	db.Table1 = &rdblite.Table[Table1]{
 		GobFilename: "data/table1.gob",
 	}
 
-	db.Invoices = &rdblite.Table[*InvoiceTable]{
+	db.Invoices = &rdblite.Table[InvoiceTable]{
 		GobFilename: "data/invoices.gob",
 	}
 

@@ -144,13 +144,13 @@ func rdbtest() {
 	db := NewDB()
 	defer db.Close()
 
-	rows := db.Table1.Query(func(row *Table1) bool {
+	rows := db.Table1.Query(func(row Table1) bool {
 		return strings.Contains(row.CustomerName, "Tomas") && row.ItemCount < 5
 	})
 	log.Println("query rows count =", len(rows))
 	fmt.Println()
 
-	rows = db.Table1.QueryPaged(10, 5, func(row *Table1) bool {
+	rows = db.Table1.QueryPaged(10, 5, func(row Table1) bool {
 		return strings.Contains(row.CustomerName, "Tomas") && row.ItemCount < 5
 	})
 	log.Println("query paged count =", len(rows))
@@ -163,8 +163,10 @@ func rdbtest() {
 	fmt.Println()
 
 	// db.Table1.Delete(99999)
-	log.Println("id 99,999 =", db.Table1.FindByID(99_999))
-	log.Println("id invalid =", db.Table1.FindByID(-1))
+	_, r := db.Table1.FindByID(99_999)
+	log.Println("id 99,999 =", r)
+	_, r = db.Table1.FindByID(-1)
+	log.Println("id invalid =", r)
 	fmt.Println()
 
 	str = "Fort"

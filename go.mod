@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/brianvoe/gofakeit/v6 v6.18.0
-	github.com/mgholam/rdblite v0.0.0-20220813040729-1c460baba214
+	github.com/mgholam/rdblite v0.0.0-20220814143505-558dd474bfe2
 	gorm.io/driver/sqlite v1.2.6
 	gorm.io/gorm v1.22.5-0.20211210095019-adf8f70f06d9
 )
