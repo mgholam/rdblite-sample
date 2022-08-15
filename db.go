@@ -14,8 +14,8 @@ type DB struct {
 
 func (d *DB) Close() {
 	// save all tables
-	d.Table1.SaveGob()
-	d.Invoices.SaveGob()
+	d.Table1.Close()
+	d.Invoices.Close()
 }
 
 func NewDB() *DB {
